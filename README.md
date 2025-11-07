@@ -4,6 +4,13 @@ A simple **Angular 20** app demonstrating standalone components. This is a **fro
 
 ---
 
+## 🌐 Live Demo
+
+👉 **Access the live app here:**  
+[🔗 Visit Cow Catalog](https://cowcatalogue.netlify.app/)
+
+---
+
 ## 🚀 Features
 
 - **Cow List**
@@ -30,7 +37,7 @@ A simple **Angular 20** app demonstrating standalone components. This is a **fro
 
 ## 🎬 Demo
 
-<video src="https://github.com/YOUR_USERNAME/Cow-Catalog/raw/main/src/assets/demo.webm" controls width="600">
+<video src="https://github.com/amohata007/Cow-Catalog/raw/main/src/assets/demo.webm" controls width="600">
   Your browser does not support the video tag.
 </video>
 
