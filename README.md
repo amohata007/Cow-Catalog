@@ -16,7 +16,7 @@ A simple **Angular 20** app demonstrating standalone components. This is a **fro
   - Add a new cow in-memory.
   - Used Template driven form for this implementation with validations.
 
-  - **Add New Cow**
+- **Add Detail Page**
   - When clicking on any row in list page, detailed page is opened up.
 
 - **Standalone Components**
@@ -34,6 +34,6 @@ A simple **Angular 20** app demonstrating standalone components. This is a **fro
 
 ```bash
 # Clone the repository
-git clone <repo-url>
+git clone https://github.com/amohata007/Cow-Catalog.git
 cd cow-catalog
 ng s --o
