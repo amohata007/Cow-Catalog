@@ -1,0 +1,14 @@
+<a routerLink="/">← Back</a>
+
+@if (cow) {
+  <div class="cow-detail">
+    <h2>Cow #{{ cow.id }}</h2>
+    <p><strong>Sex:</strong> {{ cow.sex }}</p>
+    <p><strong>Pen:</strong> {{ cow.pen }}</p>
+    <p><strong>Status:</strong> {{ cow.status }}</p>
+    <p><strong>Weight:</strong> {{ cow.weight || '—' }} kg</p>
+    <p><strong>Last Event Date:</strong> {{ cow.lastEventDate }}</p>
+    <h3>Recent Events</h3>
+    <p>No events available</p>
+  </div>
+}

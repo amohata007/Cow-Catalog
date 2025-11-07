@@ -1,0 +1,44 @@
+<div class="toolbar">
+  <!-- CowFilterService with providedIn: 'root' -->
+  <input [(ngModel)]="filterService.search" placeholder="Search by tag" class="input-search" />
+
+  <select [(ngModel)]="filterService.filterStatus" class="select-filter">
+    <option value="">All Statuses</option>
+    <option>Active</option>
+    <option>In Treatment</option>
+    <option>Deceased</option>
+  </select>
+
+  <select [(ngModel)]="filterService.filterPen" class="select-filter">
+    <option value="">All Pens</option>
+    <option>North Barn</option>
+    <option>Treatment Zone</option>
+    <option>Quarantine Area</option>
+    <option>South Barn</option>
+  </select>
+
+  <a routerLink="/add" class="add-btn">+ Add Cow</a>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ear Tag</th>
+      <th>Sex</th>
+      <th>Pen</th>
+      <th>Status</th>
+      <th>Last Event</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (cow of filteredCows; track cow) {
+      <tr [routerLink]="['/cow', cow.id]" class="clickable">
+        <td>{{ cow.id }}</td>
+        <td>{{ cow.sex }}</td>
+        <td>{{ cow.pen }}</td>
+        <td>{{ cow.status }}</td>
+        <td>{{ cow.lastEventDate || '—' }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

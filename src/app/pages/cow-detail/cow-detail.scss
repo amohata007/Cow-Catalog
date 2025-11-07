@@ -1,0 +1,41 @@
+a {
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cow-detail {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.cow-detail h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.cow-detail h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.cow-detail p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+strong {
+  font-weight: 600;
+}

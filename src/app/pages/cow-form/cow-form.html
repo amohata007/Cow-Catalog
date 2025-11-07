@@ -1,0 +1,93 @@
+
+<h2 class="header">Add New Cow</h2>
+<div class="form-container">
+
+  <form #cowForm="ngForm" (ngSubmit)="save()" novalidate>
+    <div class="form-group">
+      <label for="id">Ear Tag *</label>
+      <input
+        id="id"
+        name="id"
+        [(ngModel)]="cow.id"
+        #idField="ngModel"
+        required
+        (ngModelChange)="checkUniqueId()"
+        />
+        @if (idField.invalid && idField.touched) {
+          <div class="error">
+            Ear Tag is required.
+          </div>
+        }
+        @if (idNotUnique) {
+          <div class="error">
+            Ear Tag must be unique!
+          </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="sex">Sex *</label>
+        <select id="sex" name="sex" [(ngModel)]="cow.sex" required>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="pen">Pen *</label>
+        <select
+          id="pen"
+          name="pen"
+          [(ngModel)]="cow.pen"
+          #penField="ngModel"
+          required
+          (ngModelChange)="validatePen()"
+          >
+          <option value="" disabled selected>Select a pen</option>
+          @for (p of pens; track p) {
+            <option [value]="p">{{ p }}</option>
+          }
+        </select>
+        @if (penField.invalid && penField.touched) {
+          <div class="error">
+            Pen is required.
+          </div>
+        }
+        @if (penInvalid) {
+          <div class="error">
+            Invalid pen selected.
+          </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status *</label>
+        <select id="status" name="status" [(ngModel)]="cow.status" required>
+          <option value="Active">Active</option>
+          <option value="In Treatment">In Treatment</option>
+          <option value="Deceased">Deceased</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="weight">Weight (kg)</label>
+        <input
+          id="weight"
+          type="number"
+          min="0"
+          name="weight"
+          [(ngModel)]="cow.weight"
+          />
+        </div>
+
+        <button
+          type="submit"
+    [disabled]="
+      cowForm.invalid || idNotUnique || penInvalid
+    "
+          >
+          Save
+        </button>
+        <button type="button" (click)="cancel()">Cancel</button>
+      </form>
+    </div>

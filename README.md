@@ -1,59 +1,39 @@
-# CowCatalog
+# 🐄 Cow Catalog (Angular 20)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+A simple **Angular 20** app demonstrating standalone components. This is a **frontend-only** application — using local storage. All data is stored in memory during runtime.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
 
-```bash
-ng serve
-```
+- **Cow List**
+  - View a list of cows with basic details: ear tag, sex, pen, status, and last event.
+  - Search by cow ear tag.
+  - Filter cows by **status** (`Active`, `In Treatment`, `Deceased`) or **pen** (`North Barn`, `Treatment Zone`, `Quarantine Area`, `South Barn`).
+  - Filterable data persists after we come back from add or detail page.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Add New Cow**
+  - Add a new cow in-memory.
+  - Used Template driven form for this implementation with validations.
 
-## Code scaffolding
+  - **Add New Cow**
+  - When clicking on any row in list page, detailed page is opened up.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Standalone Components**
+  - Demonstrates Angular's standalone component approach (no module declarations required).
 
-```bash
-ng generate component component-name
-```
+- **Responsive UI**
+  - The layout adapts to different screen sizes.
+  - Simple toolbar for search and filters.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🛠️ Getting Started
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Installation
 
 ```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Clone the repository
+git clone <repo-url>
+cd cow-catalog
+ng s --o
