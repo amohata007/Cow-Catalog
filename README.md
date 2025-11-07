@@ -28,6 +28,14 @@ A simple **Angular 20** app demonstrating standalone components. This is a **fro
 
 ---
 
+## 🎬 Demo
+
+<video src="https://github.com/YOUR_USERNAME/Cow-Catalog/src/assets/demo.mp4" controls width="600">
+  Your browser does not support the video tag.
+</video>
+
+---
+
 ## 🛠️ Getting Started
 
 ### Installation
